@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- HTML5のドキュメントタイプを宣言し、ブラウザにHTML5規格でコンテンツを解釈するよう指示します。 -->
+
+<html lang="en">
+<!-- HTML文書の開始を示し、言語が英語であることを宣言します。 -->
+
+<head>
+    <!-- ヘッド要素の開始。ページに関するメタ情報やリンクなどを含みます。 -->
+    <meta charset="UTF-8">
+    <!-- 文書の文字エンコーディングをUTF-8として設定し、様々な文字をサポートします。 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ビューポートの設定を行い、デバイスの画面幅に基づいてページが適切にスケールされるようにします。初期スケールは1.0。 -->
+
+    <title>Register</title>
+    <!-- タブバーに表示されるページのタイトルを「Register」と設定します。 -->
+
+    <link rel="stylesheet" href="register.css">
+    <!-- 外部CSSファイル「register.css」をリンクし、ページのスタイリングを定義します。 -->
+</head>
+
+<body>
+    <!-- ボディ要素の開始。ユーザーに表示されるコンテンツが含まれます。 -->
+    <div class="register-container">
+        <!-- 登録フォーム全体を囲むコンテナ。スタイリングやレイアウトのために使用されます。 -->
+        <form action="/submit-registration" method="POST">
+            <!-- フォーム要素の開始。データをサーバーの'/submit-registration'エンドポイントにPOSTメソッドで送信します。 -->
+
+            <h2>Register</h2>
+            <!-- フォームのタイトルとして「Register」を表示します。 -->
+
+            <div class="input-group">
+                <!-- フォーム内の入力項目をグルーピングするためのdiv。スタイリングやレイアウトにも影響します。 -->
+                <label for="email">Email</label>
+                <!-- メールアドレス入力フィールドに対するラベル。 -->
+                <input type="email" id="email" name="email" required>
+                <!-- メールアドレスを入力するためのフィールド。入力が必須です。 -->
+            </div>
+
+            <div class="input-group">
+                <!-- 別の入力グループ。ユーザー名の入力を管理します。 -->
+                <label for="username">Username</label>
+                <!-- ユーザー名入力フィールドに対するラベル。 -->
+                <input type="text" id="username" name="username" required>
+                <!-- ユーザー名を入力するためのテキストフィールド。入力が必須です。 -->
+            </div>
+
+            <div class="input-group">
+                <!-- パスワード入力のための入力グループ。 -->
+                <label for="password">Password</label>
+                <!-- パスワード入力フィールドに対するラベル。 -->
+                <input type="password" id="password" name="password" required>
+                <!-- パスワードを入力するためのフィールド。文字が表示されずにドットで隠されます。入力が必須です。 -->
+            </div>
+
+            <button type="submit">Register</button>
+            <!-- フォームを送信するためのボタン。テキストは「Register」です。 -->
+        </form>
+    </div>
+</body>
+</html>

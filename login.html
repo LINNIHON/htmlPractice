@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- HTML5文書を指定し、ブラウザにHTML5の標準に従ってレンダリングするよう指示します -->
+
+<html lang="en">
+<!-- HTMLドキュメントの開始を示し、言語を英語に設定して、アクセシビリティと検索エンジン最適化を向上させます -->
+
+<head>
+    <!-- メタデータ、スタイルシートへのリンク、およびHTML本文として表示されないその他のリソースを含む部分 -->
+    <meta charset="UTF-8">
+    <!-- 文字エンコーディングをUTF-8に設定し、ほとんどの言語の文字を含め、テキストが正しく表示されるようにします -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 特にモバイルデバイスでページが正しくスケールされるようにし、ビューポートの幅を画面の幅に合わせ、初期ズームレベルを1に設定します -->
+
+    <title>Login</title>
+    <!-- ウェブページのタイトルを設定し、ブラウザのタブに表示されます -->
+
+    <link rel="stylesheet" href="login.css">
+    <!-- 'login.css'という名前の外部CSSファイルをリンクし、HTML要素のスタイリングに使用します -->
+</head>
+
+<body>
+    <!-- ユーザーに表示されるHTMLドキュメントの内容を含む部分 -->
+    <div class="login-container">
+        <!-- ログイン要素のスタイリングとレイアウトをグループ化するためのコンテナdiv -->
+        <form action="/submit-login" method="POST">
+            <!-- サーバーのエンドポイント'/submit-login'にデータを送信するフォームを定義し、データプライバシーを保護するためにPOSTメソッドを使用します -->
+            <h2>Login</h2>
+            <!-- フォームの見出しで、ログインフォームであることを明確にラベリングします -->
+
+            <div class="input-group">
+                <!-- スタイリングやより良いアクセシビリティのために関連する要素を一つのグループにまとめます -->
+                <label for="username">Username</label>
+                <!-- ユーザー名入力用のラベルを定義し、アクセシビリティを向上させます -->
+                <input type="text" id="username" name="username" required>
+                <!-- ユーザー名のためのテキスト入力フィールドを作成します; 'required'属性によりこのフィールドの入力が必須になります -->
+            </div>
+
+            <div class="input-group">
+                <!-- パスワード入力のための同様のグループ -->
+                <label for="password">Password</label>
+                <!-- パスワード入力用のラベルを定義します -->
+                <input type="password" id="password" name="password" required>
+                <!-- パスワードフィールドを作成し、ユーザーの入力したテキストが隠されます; これも必須フィールドです -->
+            </div>
+
+            <button type="submit">Login</button>
+            <!-- フォームのデータを送信するボタンを作成します -->
+        </form>
+    </div>
+</body>
+</html>
